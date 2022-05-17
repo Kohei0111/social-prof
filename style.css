@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&family=Outfit:wght@400;700&family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  max-width: 375px;
+  margin: 0 auto;
+  background-image: url(images/bg-pattern-top-mobile.svg),
+    url(images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+}
+
+.container {
+  display: gird;
+  justify-content: center;
+  grid-template:
+    "title"
+    "reviews"
+    "profs";
+}
+
+.hero {
+  grid-area: title;
+  text-align: center;
+  justify-content: center;
+}
+.title {
+  color: hsl(300, 43%, 22%);
+  margin: 50px 50px 20px;
+  letter-spacing: -0.1rem;
+  font-size: 35px;
+  font-style: bold;
+  font-weight: 700;
+}
+.subtitle {
+  color: hsl(303, 10%, 53%);
+  font-weight: 500;
+  font-size: 15px;
+  margin: 0 48px;
+  line-height: 20px;
+}
+.wrap-reviews {
+  width: 80%;
+  height: auto;
+  margin: 10px auto;
+  grid-area: reviews;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  height: 60px;
+  margin-bottom: 30px;
+  background-color: hsl(300, 24%, 96%);
+  color: hsl(300, 43%, 22%);
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.wrap-profiles {
+  grid-area: profs;
+}
+
+.card {
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: hsl(300, 43%, 22%);
+  width: 80%;
+  padding: 30px;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+}
+
+.card-pic {
+  display: flex;
+}
+
+.card-pic > img {
+  height: 34px;
+  border-radius: 50px;
+  margin: 0 20px 20px 0;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 400;
+}
+.name > p {
+  margin-top: 3px;
+  font-size: 17px;
+  color: hsl(333, 80%, 67%);
+}
+
+.card > p {
+  line-height: 20px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-image: url(images/bg-pattern-top-desktop.svg),
+      url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    min-width: 1350px;
+    min-height: 100vh;
+  }
+
+  .container {
+    display: grid;
+    grid-template:
+      "title reviews"
+      "profs profs"
+      /1fr 1fr;
+  }
+
+  .hero {
+    grid-area: title;
+    margin: 40px 0 40px 120px;
+    padding-right: 50px;
+    text-align: left;
+  }
+
+  .title {
+    font-size: 50px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+  .wrap-reviews {
+    grid-area: reviews;
+    margin: 100px auto 10px 40px;
+    width: 360px;
+  }
+
+  .review {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .review2 {
+    position: relative;
+    left: 50px;
+  }
+  .review3 {
+    position: relative;
+    left: 100px;
+  }
+
+  section {
+    grid-area: profs;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .wrap-profiles {
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .card {
+    width: 320px;
+    min-height: 220px;
+  }
+
+  .card2 {
+    position: relative;
+    top: 10px;
+  }
+  .card3 {
+    position: relative;
+    top: 20px;
+  }
+}
